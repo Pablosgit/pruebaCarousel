@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+$Corporate-1: #009999;
+$Corporate-2: #eff3f6;
+$Font1:'Roboto', sans-serif;
+$Font2:Verdana, Geneva, Tahoma, sans-serif;
+$Font-text: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $Font-text;
+}
+
+h1, h2 {
+    font-family: $Font1;
+    font-size:2.3em;
+    margin-top: 5px;
+}
+
+h3, h4, h5 {
+    font-family: $Font2;
+    color: $Corporate-1;
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+a, p, button {
+    font-family: $Font-text;
+    font-size: 10px;
+}
+
+.owl-carousel > .owl-item {
+    background-color: $Corporate-2;
+}
+
+section.content-carousel{
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.owl-carousel .owl-stage-outer , .owl-carousel .owl-stage-outer .owl-stage {
+    background-color: $Corporate-2;
+}
+
+#carousel-1 {
+    display: none;
+    height: auto;
+    .owl-nav button {
+        padding: 6px 20px !important;
+        margin: 0;
+        font-size: 25px;
+    }
+    .owl-nav button span::before{
+        content: "";
+    }
+
+    .owl-nav .owl-prev {
+        background-color: white;
+    }
+
+    .owl-nav .owl-next {
+        color: white;
+        background-color: lighten($Corporate-1, 10%);
+    }
+
+    .owl-nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .owl-dots {
+        text-align: left;
+        width: calc( 50% - 70px);
+        position: absolute;
+        bottom: 20px;
+        left: calc( 50% + 70px);
+    }
+
+    .owl-dots button.active span{
+        background: $Corporate-1;
+        opacity: 1;
+    }
+
+    .owl-dots .owl-dot span {
+        background-color: lighten($Corporate-1, 10%);
+        opacity: 0.25;
+    }
+
+}
+
+#carousel-1 .content-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: $Corporate-2;
+
+    .parte2 {
+       box-sizing: border-box;
+       padding: 40px 70px 60px; 
+        
+        h2 span {
+            display: block;
+            text-transform: capitalize;
+        }
+
+       .button-item{
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: flex-start;
+        }
+
+       .button-item a, .button-item button{
+           padding: 8px 25px;
+           border: 1px solid $Corporate-1;
+           border-radius: 4px;
+           text-decoration: none;
+           color: $Corporate-1;
+           margin-top: 5px;
+        }
+
+        .button-item button.button-promotion{
+            background-color: $Corporate-1;
+            color: $Corporate-2;
+            cursor: pointer;
+        }
+
+       .button-item a:first-child{
+           margin-right: 10px;
+        }
+
+       .button-item button::after{
+           content: "  →";
+           margin-left: 5px;
+           font-weight: bold;
+        }
+
+    }
+}
+
+
+
+
